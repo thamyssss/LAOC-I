@@ -1,0 +1,20 @@
+module Int_Mem(PC, cod, clock);
+input clock;
+input [7:0]PC;
+output [7:0]code;
+
+reg[7:0]linha;
+reg[7:0]memprog[65:0]
+assign code = linha;
+
+initial begin
+	???
+end
+
+always @(negedge clock) begin 
+//Caso PC não mude, halt desligado
+//Codigo não executa
+	linha = memprog[PC];
+end
+
+endmodule

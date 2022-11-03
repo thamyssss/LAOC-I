@@ -1,0 +1,30 @@
+|Mem_Dados
+clock => ~NO_FANOUT~
+endereco[0] => ~NO_FANOUT~
+endereco[1] => ~NO_FANOUT~
+endereco[2] => ~NO_FANOUT~
+endereco[3] => ~NO_FANOUT~
+endereco[4] => ~NO_FANOUT~
+endereco[5] => ~NO_FANOUT~
+endereco[6] => ~NO_FANOUT~
+endereco[7] => ~NO_FANOUT~
+MemRead => ~NO_FANOUT~
+MemWrite => ~NO_FANOUT~
+dado_in[0] => ~NO_FANOUT~
+dado_in[1] => ~NO_FANOUT~
+dado_in[2] => ~NO_FANOUT~
+dado_in[3] => ~NO_FANOUT~
+dado_in[4] => ~NO_FANOUT~
+dado_in[5] => ~NO_FANOUT~
+dado_in[6] => ~NO_FANOUT~
+dado_in[7] => ~NO_FANOUT~
+dado_out[0] <= <GND>
+dado_out[1] <= <GND>
+dado_out[2] <= <GND>
+dado_out[3] <= <GND>
+dado_out[4] <= <GND>
+dado_out[5] <= <GND>
+dado_out[6] <= <GND>
+dado_out[7] <= <GND>
+
+

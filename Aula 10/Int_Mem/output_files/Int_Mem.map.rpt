@@ -1,0 +1,797 @@
+Analysis & Synthesis report for Int_Mem
+Sun Jun 26 16:21:31 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jun 26 16:21:31 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Int_Mem                                         ;
+; Top-level Entity Name              ; Int_Mem                                         ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 19                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Int_Mem            ; Int_Mem            ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                               ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+; Int_Mem.v                        ; yes             ; User Verilog HDL File  ; D:/Quartus/Quartus/Aula_10/Int_Mem/Int_Mem.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 19    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |Int_Mem                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |Int_Mem            ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++-----------------------------------------+--------------------------------------+
+; Register name                           ; Reason for Removal                   ;
++-----------------------------------------+--------------------------------------+
+; instru~0                                ; Stuck at GND due to stuck port clock ;
+; instru~1                                ; Stuck at GND due to stuck port clock ;
+; instru~2                                ; Stuck at GND due to stuck port clock ;
+; instru~3                                ; Stuck at GND due to stuck port clock ;
+; instru~4                                ; Stuck at GND due to stuck port clock ;
+; instru~5                                ; Stuck at GND due to stuck port clock ;
+; instru~6                                ; Stuck at GND due to stuck port clock ;
+; instru~7                                ; Stuck at GND due to stuck port clock ;
+; instru~8                                ; Stuck at GND due to stuck port clock ;
+; instru~9                                ; Stuck at GND due to stuck port clock ;
+; instru~10                               ; Stuck at GND due to stuck port clock ;
+; instru~11                               ; Stuck at GND due to stuck port clock ;
+; instru~12                               ; Stuck at GND due to stuck port clock ;
+; instru~13                               ; Stuck at GND due to stuck port clock ;
+; instru~14                               ; Stuck at GND due to stuck port clock ;
+; instru~15                               ; Stuck at GND due to stuck port clock ;
+; instru~16                               ; Stuck at GND due to stuck port clock ;
+; instru~17                               ; Stuck at GND due to stuck port clock ;
+; instru~18                               ; Stuck at GND due to stuck port clock ;
+; instru~19                               ; Stuck at GND due to stuck port clock ;
+; instru~20                               ; Stuck at GND due to stuck port clock ;
+; instru~21                               ; Stuck at GND due to stuck port clock ;
+; instru~22                               ; Stuck at GND due to stuck port clock ;
+; instru~23                               ; Stuck at GND due to stuck port clock ;
+; instru~24                               ; Stuck at GND due to stuck port clock ;
+; instru~25                               ; Stuck at GND due to stuck port clock ;
+; instru~26                               ; Stuck at GND due to stuck port clock ;
+; instru~27                               ; Stuck at GND due to stuck port clock ;
+; instru~28                               ; Stuck at GND due to stuck port clock ;
+; instru~29                               ; Stuck at GND due to stuck port clock ;
+; instru~30                               ; Stuck at GND due to stuck port clock ;
+; instru~31                               ; Stuck at GND due to stuck port clock ;
+; instru~32                               ; Stuck at GND due to stuck port clock ;
+; instru~33                               ; Stuck at GND due to stuck port clock ;
+; instru~34                               ; Stuck at GND due to stuck port clock ;
+; instru~35                               ; Stuck at GND due to stuck port clock ;
+; instru~36                               ; Stuck at GND due to stuck port clock ;
+; instru~37                               ; Stuck at GND due to stuck port clock ;
+; instru~38                               ; Stuck at GND due to stuck port clock ;
+; instru~39                               ; Stuck at GND due to stuck port clock ;
+; instru~40                               ; Stuck at GND due to stuck port clock ;
+; instru~41                               ; Stuck at GND due to stuck port clock ;
+; instru~42                               ; Stuck at GND due to stuck port clock ;
+; instru~43                               ; Stuck at GND due to stuck port clock ;
+; instru~44                               ; Stuck at GND due to stuck port clock ;
+; instru~45                               ; Stuck at GND due to stuck port clock ;
+; instru~46                               ; Stuck at GND due to stuck port clock ;
+; instru~47                               ; Stuck at GND due to stuck port clock ;
+; instru~48                               ; Stuck at GND due to stuck port clock ;
+; instru~49                               ; Stuck at GND due to stuck port clock ;
+; instru~50                               ; Stuck at GND due to stuck port clock ;
+; instru~51                               ; Stuck at GND due to stuck port clock ;
+; instru~52                               ; Stuck at GND due to stuck port clock ;
+; instru~53                               ; Stuck at GND due to stuck port clock ;
+; instru~54                               ; Stuck at GND due to stuck port clock ;
+; instru~55                               ; Stuck at GND due to stuck port clock ;
+; instru~56                               ; Stuck at GND due to stuck port clock ;
+; instru~57                               ; Stuck at GND due to stuck port clock ;
+; instru~58                               ; Stuck at GND due to stuck port clock ;
+; instru~59                               ; Stuck at GND due to stuck port clock ;
+; instru~60                               ; Stuck at GND due to stuck port clock ;
+; instru~61                               ; Stuck at GND due to stuck port clock ;
+; instru~62                               ; Stuck at GND due to stuck port clock ;
+; instru~63                               ; Stuck at GND due to stuck port clock ;
+; instru~64                               ; Stuck at GND due to stuck port clock ;
+; instru~65                               ; Stuck at GND due to stuck port clock ;
+; instru~66                               ; Stuck at GND due to stuck port clock ;
+; instru~67                               ; Stuck at GND due to stuck port clock ;
+; instru~68                               ; Stuck at GND due to stuck port clock ;
+; instru~69                               ; Stuck at GND due to stuck port clock ;
+; instru~70                               ; Stuck at GND due to stuck port clock ;
+; instru~71                               ; Stuck at GND due to stuck port clock ;
+; instru~72                               ; Stuck at GND due to stuck port clock ;
+; instru~73                               ; Stuck at GND due to stuck port clock ;
+; instru~74                               ; Stuck at GND due to stuck port clock ;
+; instru~75                               ; Stuck at GND due to stuck port clock ;
+; instru~76                               ; Stuck at GND due to stuck port clock ;
+; instru~77                               ; Stuck at GND due to stuck port clock ;
+; instru~78                               ; Stuck at GND due to stuck port clock ;
+; instru~79                               ; Stuck at GND due to stuck port clock ;
+; instru~80                               ; Stuck at GND due to stuck port clock ;
+; instru~81                               ; Stuck at GND due to stuck port clock ;
+; instru~82                               ; Stuck at GND due to stuck port clock ;
+; instru~83                               ; Stuck at GND due to stuck port clock ;
+; instru~84                               ; Stuck at GND due to stuck port clock ;
+; instru~85                               ; Stuck at GND due to stuck port clock ;
+; instru~86                               ; Stuck at GND due to stuck port clock ;
+; instru~87                               ; Stuck at GND due to stuck port clock ;
+; instru~88                               ; Stuck at GND due to stuck port clock ;
+; instru~89                               ; Stuck at GND due to stuck port clock ;
+; instru~90                               ; Stuck at GND due to stuck port clock ;
+; instru~91                               ; Stuck at GND due to stuck port clock ;
+; instru~92                               ; Stuck at GND due to stuck port clock ;
+; instru~93                               ; Stuck at GND due to stuck port clock ;
+; instru~94                               ; Stuck at GND due to stuck port clock ;
+; instru~95                               ; Stuck at GND due to stuck port clock ;
+; instru~96                               ; Stuck at GND due to stuck port clock ;
+; instru~97                               ; Stuck at GND due to stuck port clock ;
+; instru~98                               ; Stuck at GND due to stuck port clock ;
+; instru~99                               ; Stuck at GND due to stuck port clock ;
+; instru~100                              ; Stuck at GND due to stuck port clock ;
+; instru~101                              ; Stuck at GND due to stuck port clock ;
+; instru~102                              ; Stuck at GND due to stuck port clock ;
+; instru~103                              ; Stuck at GND due to stuck port clock ;
+; instru~104                              ; Stuck at GND due to stuck port clock ;
+; instru~105                              ; Stuck at GND due to stuck port clock ;
+; instru~106                              ; Stuck at GND due to stuck port clock ;
+; instru~107                              ; Stuck at GND due to stuck port clock ;
+; instru~108                              ; Stuck at GND due to stuck port clock ;
+; instru~109                              ; Stuck at GND due to stuck port clock ;
+; instru~110                              ; Stuck at GND due to stuck port clock ;
+; instru~111                              ; Stuck at GND due to stuck port clock ;
+; instru~112                              ; Stuck at GND due to stuck port clock ;
+; instru~113                              ; Stuck at GND due to stuck port clock ;
+; instru~114                              ; Stuck at GND due to stuck port clock ;
+; instru~115                              ; Stuck at GND due to stuck port clock ;
+; instru~116                              ; Stuck at GND due to stuck port clock ;
+; instru~117                              ; Stuck at GND due to stuck port clock ;
+; instru~118                              ; Stuck at GND due to stuck port clock ;
+; instru~119                              ; Stuck at GND due to stuck port clock ;
+; instru~120                              ; Stuck at GND due to stuck port clock ;
+; instru~121                              ; Stuck at GND due to stuck port clock ;
+; instru~122                              ; Stuck at GND due to stuck port clock ;
+; instru~123                              ; Stuck at GND due to stuck port clock ;
+; instru~124                              ; Stuck at GND due to stuck port clock ;
+; instru~125                              ; Stuck at GND due to stuck port clock ;
+; instru~126                              ; Stuck at GND due to stuck port clock ;
+; instru~127                              ; Stuck at GND due to stuck port clock ;
+; instru~128                              ; Stuck at GND due to stuck port clock ;
+; instru~129                              ; Stuck at GND due to stuck port clock ;
+; instru~130                              ; Stuck at GND due to stuck port clock ;
+; instru~131                              ; Stuck at GND due to stuck port clock ;
+; instru~132                              ; Stuck at GND due to stuck port clock ;
+; instru~133                              ; Stuck at GND due to stuck port clock ;
+; instru~134                              ; Stuck at GND due to stuck port clock ;
+; instru~135                              ; Stuck at GND due to stuck port clock ;
+; instru~136                              ; Stuck at GND due to stuck port clock ;
+; instru~137                              ; Stuck at GND due to stuck port clock ;
+; instru~138                              ; Stuck at GND due to stuck port clock ;
+; instru~139                              ; Stuck at GND due to stuck port clock ;
+; instru~140                              ; Stuck at GND due to stuck port clock ;
+; instru~141                              ; Stuck at GND due to stuck port clock ;
+; instru~142                              ; Stuck at GND due to stuck port clock ;
+; instru~143                              ; Stuck at GND due to stuck port clock ;
+; instru~144                              ; Stuck at GND due to stuck port clock ;
+; instru~145                              ; Stuck at GND due to stuck port clock ;
+; instru~146                              ; Stuck at GND due to stuck port clock ;
+; instru~147                              ; Stuck at GND due to stuck port clock ;
+; instru~148                              ; Stuck at GND due to stuck port clock ;
+; instru~149                              ; Stuck at GND due to stuck port clock ;
+; instru~150                              ; Stuck at GND due to stuck port clock ;
+; instru~151                              ; Stuck at GND due to stuck port clock ;
+; instru~152                              ; Stuck at GND due to stuck port clock ;
+; instru~153                              ; Stuck at GND due to stuck port clock ;
+; instru~154                              ; Stuck at GND due to stuck port clock ;
+; instru~155                              ; Stuck at GND due to stuck port clock ;
+; instru~156                              ; Stuck at GND due to stuck port clock ;
+; instru~157                              ; Stuck at GND due to stuck port clock ;
+; instru~158                              ; Stuck at GND due to stuck port clock ;
+; instru~159                              ; Stuck at GND due to stuck port clock ;
+; instru~160                              ; Stuck at GND due to stuck port clock ;
+; instru~161                              ; Stuck at GND due to stuck port clock ;
+; instru~162                              ; Stuck at GND due to stuck port clock ;
+; instru~163                              ; Stuck at GND due to stuck port clock ;
+; instru~164                              ; Stuck at GND due to stuck port clock ;
+; instru~165                              ; Stuck at GND due to stuck port clock ;
+; instru~166                              ; Stuck at GND due to stuck port clock ;
+; instru~167                              ; Stuck at GND due to stuck port clock ;
+; instru~168                              ; Stuck at GND due to stuck port clock ;
+; instru~169                              ; Stuck at GND due to stuck port clock ;
+; instru~170                              ; Stuck at GND due to stuck port clock ;
+; instru~171                              ; Stuck at GND due to stuck port clock ;
+; instru~172                              ; Stuck at GND due to stuck port clock ;
+; instru~173                              ; Stuck at GND due to stuck port clock ;
+; instru~174                              ; Stuck at GND due to stuck port clock ;
+; instru~175                              ; Stuck at GND due to stuck port clock ;
+; instru~176                              ; Stuck at GND due to stuck port clock ;
+; instru~177                              ; Stuck at GND due to stuck port clock ;
+; instru~178                              ; Stuck at GND due to stuck port clock ;
+; instru~179                              ; Stuck at GND due to stuck port clock ;
+; instru~180                              ; Stuck at GND due to stuck port clock ;
+; instru~181                              ; Stuck at GND due to stuck port clock ;
+; instru~182                              ; Stuck at GND due to stuck port clock ;
+; instru~183                              ; Stuck at GND due to stuck port clock ;
+; instru~184                              ; Stuck at GND due to stuck port clock ;
+; instru~185                              ; Stuck at GND due to stuck port clock ;
+; instru~186                              ; Stuck at GND due to stuck port clock ;
+; instru~187                              ; Stuck at GND due to stuck port clock ;
+; instru~188                              ; Stuck at GND due to stuck port clock ;
+; instru~189                              ; Stuck at GND due to stuck port clock ;
+; instru~190                              ; Stuck at GND due to stuck port clock ;
+; instru~191                              ; Stuck at GND due to stuck port clock ;
+; instru~192                              ; Stuck at GND due to stuck port clock ;
+; instru~193                              ; Stuck at GND due to stuck port clock ;
+; instru~194                              ; Stuck at GND due to stuck port clock ;
+; instru~195                              ; Stuck at GND due to stuck port clock ;
+; instru~196                              ; Stuck at GND due to stuck port clock ;
+; instru~197                              ; Stuck at GND due to stuck port clock ;
+; instru~198                              ; Stuck at GND due to stuck port clock ;
+; instru~199                              ; Stuck at GND due to stuck port clock ;
+; instru~200                              ; Stuck at GND due to stuck port clock ;
+; instru~201                              ; Stuck at GND due to stuck port clock ;
+; instru~202                              ; Stuck at GND due to stuck port clock ;
+; instru~203                              ; Stuck at GND due to stuck port clock ;
+; instru~204                              ; Stuck at GND due to stuck port clock ;
+; instru~205                              ; Stuck at GND due to stuck port clock ;
+; instru~206                              ; Stuck at GND due to stuck port clock ;
+; instru~207                              ; Stuck at GND due to stuck port clock ;
+; instru~208                              ; Stuck at GND due to stuck port clock ;
+; instru~209                              ; Stuck at GND due to stuck port clock ;
+; instru~210                              ; Stuck at GND due to stuck port clock ;
+; instru~211                              ; Stuck at GND due to stuck port clock ;
+; instru~212                              ; Stuck at GND due to stuck port clock ;
+; instru~213                              ; Stuck at GND due to stuck port clock ;
+; instru~214                              ; Stuck at GND due to stuck port clock ;
+; instru~215                              ; Stuck at GND due to stuck port clock ;
+; instru~216                              ; Stuck at GND due to stuck port clock ;
+; instru~217                              ; Stuck at GND due to stuck port clock ;
+; instru~218                              ; Stuck at GND due to stuck port clock ;
+; instru~219                              ; Stuck at GND due to stuck port clock ;
+; instru~220                              ; Stuck at GND due to stuck port clock ;
+; instru~221                              ; Stuck at GND due to stuck port clock ;
+; instru~222                              ; Stuck at GND due to stuck port clock ;
+; instru~223                              ; Stuck at GND due to stuck port clock ;
+; instru~224                              ; Stuck at GND due to stuck port clock ;
+; instru~225                              ; Stuck at GND due to stuck port clock ;
+; instru~226                              ; Stuck at GND due to stuck port clock ;
+; instru~227                              ; Stuck at GND due to stuck port clock ;
+; instru~228                              ; Stuck at GND due to stuck port clock ;
+; instru~229                              ; Stuck at GND due to stuck port clock ;
+; instru~230                              ; Stuck at GND due to stuck port clock ;
+; instru~231                              ; Stuck at GND due to stuck port clock ;
+; instru~232                              ; Stuck at GND due to stuck port clock ;
+; instru~233                              ; Stuck at GND due to stuck port clock ;
+; instru~234                              ; Stuck at GND due to stuck port clock ;
+; instru~235                              ; Stuck at GND due to stuck port clock ;
+; instru~236                              ; Stuck at GND due to stuck port clock ;
+; instru~237                              ; Stuck at GND due to stuck port clock ;
+; instru~238                              ; Stuck at GND due to stuck port clock ;
+; instru~239                              ; Stuck at GND due to stuck port clock ;
+; instru~240                              ; Stuck at GND due to stuck port clock ;
+; instru~241                              ; Stuck at GND due to stuck port clock ;
+; instru~242                              ; Stuck at GND due to stuck port clock ;
+; instru~243                              ; Stuck at GND due to stuck port clock ;
+; instru~244                              ; Stuck at GND due to stuck port clock ;
+; instru~245                              ; Stuck at GND due to stuck port clock ;
+; instru~246                              ; Stuck at GND due to stuck port clock ;
+; instru~247                              ; Stuck at GND due to stuck port clock ;
+; instru~248                              ; Stuck at GND due to stuck port clock ;
+; instru~249                              ; Stuck at GND due to stuck port clock ;
+; instru~250                              ; Stuck at GND due to stuck port clock ;
+; instru~251                              ; Stuck at GND due to stuck port clock ;
+; instru~252                              ; Stuck at GND due to stuck port clock ;
+; instru~253                              ; Stuck at GND due to stuck port clock ;
+; instru~254                              ; Stuck at GND due to stuck port clock ;
+; instru~255                              ; Stuck at GND due to stuck port clock ;
+; instru~256                              ; Stuck at GND due to stuck port clock ;
+; instru~257                              ; Stuck at GND due to stuck port clock ;
+; instru~258                              ; Stuck at GND due to stuck port clock ;
+; instru~259                              ; Stuck at GND due to stuck port clock ;
+; instru~260                              ; Stuck at GND due to stuck port clock ;
+; instru~261                              ; Stuck at GND due to stuck port clock ;
+; instru~262                              ; Stuck at GND due to stuck port clock ;
+; instru~263                              ; Stuck at GND due to stuck port clock ;
+; instru~264                              ; Stuck at GND due to stuck port clock ;
+; instru~265                              ; Stuck at GND due to stuck port clock ;
+; instru~266                              ; Stuck at GND due to stuck port clock ;
+; instru~267                              ; Stuck at GND due to stuck port clock ;
+; instru~268                              ; Stuck at GND due to stuck port clock ;
+; instru~269                              ; Stuck at GND due to stuck port clock ;
+; instru~270                              ; Stuck at GND due to stuck port clock ;
+; instru~271                              ; Stuck at GND due to stuck port clock ;
+; instru~272                              ; Stuck at GND due to stuck port clock ;
+; instru~273                              ; Stuck at GND due to stuck port clock ;
+; instru~274                              ; Stuck at GND due to stuck port clock ;
+; instru~275                              ; Stuck at GND due to stuck port clock ;
+; instru~276                              ; Stuck at GND due to stuck port clock ;
+; instru~277                              ; Stuck at GND due to stuck port clock ;
+; instru~278                              ; Stuck at GND due to stuck port clock ;
+; instru~279                              ; Stuck at GND due to stuck port clock ;
+; instru~280                              ; Stuck at GND due to stuck port clock ;
+; instru~281                              ; Stuck at GND due to stuck port clock ;
+; instru~282                              ; Stuck at GND due to stuck port clock ;
+; instru~283                              ; Stuck at GND due to stuck port clock ;
+; instru~284                              ; Stuck at GND due to stuck port clock ;
+; instru~285                              ; Stuck at GND due to stuck port clock ;
+; instru~286                              ; Stuck at GND due to stuck port clock ;
+; instru~287                              ; Stuck at GND due to stuck port clock ;
+; instru~288                              ; Stuck at GND due to stuck port clock ;
+; instru~289                              ; Stuck at GND due to stuck port clock ;
+; instru~290                              ; Stuck at GND due to stuck port clock ;
+; instru~291                              ; Stuck at GND due to stuck port clock ;
+; instru~292                              ; Stuck at GND due to stuck port clock ;
+; instru~293                              ; Stuck at GND due to stuck port clock ;
+; instru~294                              ; Stuck at GND due to stuck port clock ;
+; instru~295                              ; Stuck at GND due to stuck port clock ;
+; instru~296                              ; Stuck at GND due to stuck port clock ;
+; instru~297                              ; Stuck at GND due to stuck port clock ;
+; instru~298                              ; Stuck at GND due to stuck port clock ;
+; instru~299                              ; Stuck at GND due to stuck port clock ;
+; instru~300                              ; Stuck at GND due to stuck port clock ;
+; instru~301                              ; Stuck at GND due to stuck port clock ;
+; instru~302                              ; Stuck at GND due to stuck port clock ;
+; instru~303                              ; Stuck at GND due to stuck port clock ;
+; instru~304                              ; Stuck at GND due to stuck port clock ;
+; instru~305                              ; Stuck at GND due to stuck port clock ;
+; instru~306                              ; Stuck at GND due to stuck port clock ;
+; instru~307                              ; Stuck at GND due to stuck port clock ;
+; instru~308                              ; Stuck at GND due to stuck port clock ;
+; instru~309                              ; Stuck at GND due to stuck port clock ;
+; instru~310                              ; Stuck at GND due to stuck port clock ;
+; instru~311                              ; Stuck at GND due to stuck port clock ;
+; instru~312                              ; Stuck at GND due to stuck port clock ;
+; instru~313                              ; Stuck at GND due to stuck port clock ;
+; instru~314                              ; Stuck at GND due to stuck port clock ;
+; instru~315                              ; Stuck at GND due to stuck port clock ;
+; instru~316                              ; Stuck at GND due to stuck port clock ;
+; instru~317                              ; Stuck at GND due to stuck port clock ;
+; instru~318                              ; Stuck at GND due to stuck port clock ;
+; instru~319                              ; Stuck at GND due to stuck port clock ;
+; instru~320                              ; Stuck at GND due to stuck port clock ;
+; instru~321                              ; Stuck at GND due to stuck port clock ;
+; instru~322                              ; Stuck at GND due to stuck port clock ;
+; instru~323                              ; Stuck at GND due to stuck port clock ;
+; instru~324                              ; Stuck at GND due to stuck port clock ;
+; instru~325                              ; Stuck at GND due to stuck port clock ;
+; instru~326                              ; Stuck at GND due to stuck port clock ;
+; instru~327                              ; Stuck at GND due to stuck port clock ;
+; instru~328                              ; Stuck at GND due to stuck port clock ;
+; instru~329                              ; Stuck at GND due to stuck port clock ;
+; instru~330                              ; Stuck at GND due to stuck port clock ;
+; instru~331                              ; Stuck at GND due to stuck port clock ;
+; instru~332                              ; Stuck at GND due to stuck port clock ;
+; instru~333                              ; Stuck at GND due to stuck port clock ;
+; instru~334                              ; Stuck at GND due to stuck port clock ;
+; instru~335                              ; Stuck at GND due to stuck port clock ;
+; instru~336                              ; Stuck at GND due to stuck port clock ;
+; instru~337                              ; Stuck at GND due to stuck port clock ;
+; instru~338                              ; Stuck at GND due to stuck port clock ;
+; instru~339                              ; Stuck at GND due to stuck port clock ;
+; instru~340                              ; Stuck at GND due to stuck port clock ;
+; instru~341                              ; Stuck at GND due to stuck port clock ;
+; instru~342                              ; Stuck at GND due to stuck port clock ;
+; instru~343                              ; Stuck at GND due to stuck port clock ;
+; instru~344                              ; Stuck at GND due to stuck port clock ;
+; instru~345                              ; Stuck at GND due to stuck port clock ;
+; instru~346                              ; Stuck at GND due to stuck port clock ;
+; instru~347                              ; Stuck at GND due to stuck port clock ;
+; instru~348                              ; Stuck at GND due to stuck port clock ;
+; instru~349                              ; Stuck at GND due to stuck port clock ;
+; instru~350                              ; Stuck at GND due to stuck port clock ;
+; instru~351                              ; Stuck at GND due to stuck port clock ;
+; instru~352                              ; Stuck at GND due to stuck port clock ;
+; instru~353                              ; Stuck at GND due to stuck port clock ;
+; instru~354                              ; Stuck at GND due to stuck port clock ;
+; instru~355                              ; Stuck at GND due to stuck port clock ;
+; instru~356                              ; Stuck at GND due to stuck port clock ;
+; instru~357                              ; Stuck at GND due to stuck port clock ;
+; instru~358                              ; Stuck at GND due to stuck port clock ;
+; instru~359                              ; Stuck at GND due to stuck port clock ;
+; instru~360                              ; Stuck at GND due to stuck port clock ;
+; instru~361                              ; Stuck at GND due to stuck port clock ;
+; instru~362                              ; Stuck at GND due to stuck port clock ;
+; instru~363                              ; Stuck at GND due to stuck port clock ;
+; instru~364                              ; Stuck at GND due to stuck port clock ;
+; instru~365                              ; Stuck at GND due to stuck port clock ;
+; instru~366                              ; Stuck at GND due to stuck port clock ;
+; instru~367                              ; Stuck at GND due to stuck port clock ;
+; instru~368                              ; Stuck at GND due to stuck port clock ;
+; instru~369                              ; Stuck at GND due to stuck port clock ;
+; instru~370                              ; Stuck at GND due to stuck port clock ;
+; instru~371                              ; Stuck at GND due to stuck port clock ;
+; instru~372                              ; Stuck at GND due to stuck port clock ;
+; instru~373                              ; Stuck at GND due to stuck port clock ;
+; instru~374                              ; Stuck at GND due to stuck port clock ;
+; instru~375                              ; Stuck at GND due to stuck port clock ;
+; instru~376                              ; Stuck at GND due to stuck port clock ;
+; instru~377                              ; Stuck at GND due to stuck port clock ;
+; instru~378                              ; Stuck at GND due to stuck port clock ;
+; instru~379                              ; Stuck at GND due to stuck port clock ;
+; instru~380                              ; Stuck at GND due to stuck port clock ;
+; instru~381                              ; Stuck at GND due to stuck port clock ;
+; instru~382                              ; Stuck at GND due to stuck port clock ;
+; instru~383                              ; Stuck at GND due to stuck port clock ;
+; instru~384                              ; Stuck at GND due to stuck port clock ;
+; instru~385                              ; Stuck at GND due to stuck port clock ;
+; instru~386                              ; Stuck at GND due to stuck port clock ;
+; instru~387                              ; Stuck at GND due to stuck port clock ;
+; instru~388                              ; Stuck at GND due to stuck port clock ;
+; instru~389                              ; Stuck at GND due to stuck port clock ;
+; instru~390                              ; Stuck at GND due to stuck port clock ;
+; instru~391                              ; Stuck at GND due to stuck port clock ;
+; instru~392                              ; Stuck at GND due to stuck port clock ;
+; instru~393                              ; Stuck at GND due to stuck port clock ;
+; instru~394                              ; Stuck at GND due to stuck port clock ;
+; instru~395                              ; Stuck at GND due to stuck port clock ;
+; instru~396                              ; Stuck at GND due to stuck port clock ;
+; instru~397                              ; Stuck at GND due to stuck port clock ;
+; instru~398                              ; Stuck at GND due to stuck port clock ;
+; instru~399                              ; Stuck at GND due to stuck port clock ;
+; instru~400                              ; Stuck at GND due to stuck port clock ;
+; instru~401                              ; Stuck at GND due to stuck port clock ;
+; instru~402                              ; Stuck at GND due to stuck port clock ;
+; instru~403                              ; Stuck at GND due to stuck port clock ;
+; instru~404                              ; Stuck at GND due to stuck port clock ;
+; instru~405                              ; Stuck at GND due to stuck port clock ;
+; instru~406                              ; Stuck at GND due to stuck port clock ;
+; instru~407                              ; Stuck at GND due to stuck port clock ;
+; instru~408                              ; Stuck at GND due to stuck port clock ;
+; instru~409                              ; Stuck at GND due to stuck port clock ;
+; instru~410                              ; Stuck at GND due to stuck port clock ;
+; instru~411                              ; Stuck at GND due to stuck port clock ;
+; instru~412                              ; Stuck at GND due to stuck port clock ;
+; instru~413                              ; Stuck at GND due to stuck port clock ;
+; instru~414                              ; Stuck at GND due to stuck port clock ;
+; instru~415                              ; Stuck at GND due to stuck port clock ;
+; instru~416                              ; Stuck at GND due to stuck port clock ;
+; instru~417                              ; Stuck at GND due to stuck port clock ;
+; instru~418                              ; Stuck at GND due to stuck port clock ;
+; instru~419                              ; Stuck at GND due to stuck port clock ;
+; instru~420                              ; Stuck at GND due to stuck port clock ;
+; instru~421                              ; Stuck at GND due to stuck port clock ;
+; instru~422                              ; Stuck at GND due to stuck port clock ;
+; instru~423                              ; Stuck at GND due to stuck port clock ;
+; instru~424                              ; Stuck at GND due to stuck port clock ;
+; instru~425                              ; Stuck at GND due to stuck port clock ;
+; instru~426                              ; Stuck at GND due to stuck port clock ;
+; instru~427                              ; Stuck at GND due to stuck port clock ;
+; instru~428                              ; Stuck at GND due to stuck port clock ;
+; instru~429                              ; Stuck at GND due to stuck port clock ;
+; instru~430                              ; Stuck at GND due to stuck port clock ;
+; instru~431                              ; Stuck at GND due to stuck port clock ;
+; instru~432                              ; Stuck at GND due to stuck port clock ;
+; instru~433                              ; Stuck at GND due to stuck port clock ;
+; instru~434                              ; Stuck at GND due to stuck port clock ;
+; instru~435                              ; Stuck at GND due to stuck port clock ;
+; instru~436                              ; Stuck at GND due to stuck port clock ;
+; instru~437                              ; Stuck at GND due to stuck port clock ;
+; instru~438                              ; Stuck at GND due to stuck port clock ;
+; instru~439                              ; Stuck at GND due to stuck port clock ;
+; instru~440                              ; Stuck at GND due to stuck port clock ;
+; instru~441                              ; Stuck at GND due to stuck port clock ;
+; instru~442                              ; Stuck at GND due to stuck port clock ;
+; instru~443                              ; Stuck at GND due to stuck port clock ;
+; instru~444                              ; Stuck at GND due to stuck port clock ;
+; instru~445                              ; Stuck at GND due to stuck port clock ;
+; instru~446                              ; Stuck at GND due to stuck port clock ;
+; instru~447                              ; Stuck at GND due to stuck port clock ;
+; instru~448                              ; Stuck at GND due to stuck port clock ;
+; instru~449                              ; Stuck at GND due to stuck port clock ;
+; instru~450                              ; Stuck at GND due to stuck port clock ;
+; instru~451                              ; Stuck at GND due to stuck port clock ;
+; instru~452                              ; Stuck at GND due to stuck port clock ;
+; instru~453                              ; Stuck at GND due to stuck port clock ;
+; instru~454                              ; Stuck at GND due to stuck port clock ;
+; instru~455                              ; Stuck at GND due to stuck port clock ;
+; instru~456                              ; Stuck at GND due to stuck port clock ;
+; instru~457                              ; Stuck at GND due to stuck port clock ;
+; instru~458                              ; Stuck at GND due to stuck port clock ;
+; instru~459                              ; Stuck at GND due to stuck port clock ;
+; instru~460                              ; Stuck at GND due to stuck port clock ;
+; instru~461                              ; Stuck at GND due to stuck port clock ;
+; instru~462                              ; Stuck at GND due to stuck port clock ;
+; instru~463                              ; Stuck at GND due to stuck port clock ;
+; instru~464                              ; Stuck at GND due to stuck port clock ;
+; instru~465                              ; Stuck at GND due to stuck port clock ;
+; instru~466                              ; Stuck at GND due to stuck port clock ;
+; instru~467                              ; Stuck at GND due to stuck port clock ;
+; instru~468                              ; Stuck at GND due to stuck port clock ;
+; instru~469                              ; Stuck at GND due to stuck port clock ;
+; instru~470                              ; Stuck at GND due to stuck port clock ;
+; instru~471                              ; Stuck at GND due to stuck port clock ;
+; instru~472                              ; Stuck at GND due to stuck port clock ;
+; instru~473                              ; Stuck at GND due to stuck port clock ;
+; instru~474                              ; Stuck at GND due to stuck port clock ;
+; instru~475                              ; Stuck at GND due to stuck port clock ;
+; instru~476                              ; Stuck at GND due to stuck port clock ;
+; instru~477                              ; Stuck at GND due to stuck port clock ;
+; instru~478                              ; Stuck at GND due to stuck port clock ;
+; instru~479                              ; Stuck at GND due to stuck port clock ;
+; instru~480                              ; Stuck at GND due to stuck port clock ;
+; instru~481                              ; Stuck at GND due to stuck port clock ;
+; instru~482                              ; Stuck at GND due to stuck port clock ;
+; instru~483                              ; Stuck at GND due to stuck port clock ;
+; instru~484                              ; Stuck at GND due to stuck port clock ;
+; instru~485                              ; Stuck at GND due to stuck port clock ;
+; instru~486                              ; Stuck at GND due to stuck port clock ;
+; instru~487                              ; Stuck at GND due to stuck port clock ;
+; instru~488                              ; Stuck at GND due to stuck port clock ;
+; instru~489                              ; Stuck at GND due to stuck port clock ;
+; instru~490                              ; Stuck at GND due to stuck port clock ;
+; instru~491                              ; Stuck at GND due to stuck port clock ;
+; instru~492                              ; Stuck at GND due to stuck port clock ;
+; instru~493                              ; Stuck at GND due to stuck port clock ;
+; instru~494                              ; Stuck at GND due to stuck port clock ;
+; instru~495                              ; Stuck at GND due to stuck port clock ;
+; instru~496                              ; Stuck at GND due to stuck port clock ;
+; instru~497                              ; Stuck at GND due to stuck port clock ;
+; instru~498                              ; Stuck at GND due to stuck port clock ;
+; instru~499                              ; Stuck at GND due to stuck port clock ;
+; instru~500                              ; Stuck at GND due to stuck port clock ;
+; instru~501                              ; Stuck at GND due to stuck port clock ;
+; instru~502                              ; Stuck at GND due to stuck port clock ;
+; instru~503                              ; Stuck at GND due to stuck port clock ;
+; instru~504                              ; Stuck at GND due to stuck port clock ;
+; instru~505                              ; Stuck at GND due to stuck port clock ;
+; instru~506                              ; Stuck at GND due to stuck port clock ;
+; instru~507                              ; Stuck at GND due to stuck port clock ;
+; instru~508                              ; Stuck at GND due to stuck port clock ;
+; instru~509                              ; Stuck at GND due to stuck port clock ;
+; instru~510                              ; Stuck at GND due to stuck port clock ;
+; instru~511                              ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 512 ;                                      ;
++-----------------------------------------+--------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jun 26 16:21:30 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Int_Mem -c Int_Mem
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file int_mem.v
+    Info (12023): Found entity 1: Int_Mem
+Info (12127): Elaborating entity "Int_Mem" for the top level hierarchy
+Warning (10030): Net "instru.data_a" at Int_Mem.v(8) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instru.waddr_a" at Int_Mem.v(8) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instru.we_a" at Int_Mem.v(8) has no driver or initial value, using a default initial value '0'
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "instru" is uninferred due to inappropriate RAM size
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Quartus/Quartus/Aula_10/Int_Mem/db/Int_Mem.ram0_Int_Mem_be670d89.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "OPcode[0]" is stuck at GND
+    Warning (13410): Pin "OPcode[1]" is stuck at GND
+    Warning (13410): Pin "OPcode[2]" is stuck at GND
+    Warning (13410): Pin "OPcode[3]" is stuck at GND
+    Warning (13410): Pin "label[0]" is stuck at GND
+    Warning (13410): Pin "label[1]" is stuck at GND
+    Warning (13410): Pin "label[2]" is stuck at GND
+    Warning (13410): Pin "label[3]" is stuck at GND
+    Warning (13410): Pin "label[4]" is stuck at GND
+    Warning (13410): Pin "label[5]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock"
+    Warning (15610): No output dependent on input pin "PC[6]"
+    Warning (15610): No output dependent on input pin "PC[7]"
+    Warning (15610): No output dependent on input pin "PC[0]"
+    Warning (15610): No output dependent on input pin "PC[1]"
+    Warning (15610): No output dependent on input pin "PC[2]"
+    Warning (15610): No output dependent on input pin "PC[3]"
+    Warning (15610): No output dependent on input pin "PC[4]"
+    Warning (15610): No output dependent on input pin "PC[5]"
+Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 10 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4597 megabytes
+    Info: Processing ended: Sun Jun 26 16:21:31 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

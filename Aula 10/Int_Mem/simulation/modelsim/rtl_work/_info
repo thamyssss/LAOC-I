@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Quartus\Quartus\Aula_10\Int_Mem\simulation\modelsim
+vInt_Mem
+!i10b 1
+!s100 AW=5VMW<2SSI7Qf>;_0_g1
+IO64@iSFJbZD`[SgfU<U;`3
+VGABAbbL=9J]0=84Dlh@KG2
+Z1 dD:\Quartus\Quartus\Aula_10\Int_Mem\simulation\modelsim
+w1656269536
+8D:/Quartus/Quartus/Aula_10/Int_Mem/Int_Mem.v
+FD:/Quartus/Quartus/Aula_10/Int_Mem/Int_Mem.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1656269560.520000
+!s107 D:/Quartus/Quartus/Aula_10/Int_Mem/Int_Mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus/Quartus/Aula_10/Int_Mem|D:/Quartus/Quartus/Aula_10/Int_Mem/Int_Mem.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+D:/Quartus/Quartus/Aula_10/Int_Mem -O0
+n@int_@mem

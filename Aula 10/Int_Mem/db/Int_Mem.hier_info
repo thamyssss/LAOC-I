@@ -1,0 +1,28 @@
+|Int_Mem
+clock => ~NO_FANOUT~
+PC[0] => instru.RADDR
+PC[0] => instru.PORTBRADDR
+PC[1] => instru.RADDR1
+PC[1] => instru.PORTBRADDR1
+PC[2] => instru.RADDR2
+PC[2] => instru.PORTBRADDR2
+PC[3] => instru.RADDR3
+PC[3] => instru.PORTBRADDR3
+PC[4] => instru.RADDR4
+PC[4] => instru.PORTBRADDR4
+PC[5] => instru.RADDR5
+PC[5] => instru.PORTBRADDR5
+PC[6] => ~NO_FANOUT~
+PC[7] => ~NO_FANOUT~
+OPcode[0] <= instru.DATAOUT4
+OPcode[1] <= instru.DATAOUT5
+OPcode[2] <= instru.DATAOUT6
+OPcode[3] <= instru.DATAOUT7
+label[0] <= instru.PORTBDATAOUT
+label[1] <= instru.PORTBDATAOUT1
+label[2] <= instru.PORTBDATAOUT2
+label[3] <= instru.PORTBDATAOUT3
+label[4] <= instru.PORTBDATAOUT4
+label[5] <= instru.PORTBDATAOUT5
+
+

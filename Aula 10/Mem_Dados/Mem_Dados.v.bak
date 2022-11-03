@@ -1,0 +1,30 @@
+//Memoria de dados
+
+module Mem_Dados(clock, endereco, MemRead, MemWrite, dado_in, dado_out);
+
+input clock, MemRead, memWrite;
+input [7:0]endereco, dado_in;
+input [7:0]dado_out;
+
+reg[7:0]line;
+reg[7:0]memdata[255:0];
+
+assign dado_out = line;
+
+always @(negedge clock)//Leitura
+begin
+
+if(memRead)
+	line = memdata[endereco];
+	
+end
+
+always @(posedge clock)//Escrita
+begin
+
+if(memWrite)
+	memdata[endereco] = dado_in;
+
+end
+endmodule
+

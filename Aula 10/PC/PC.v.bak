@@ -1,0 +1,19 @@
+//Program Counter
+module PC(clock, adress,pc_out/*halt e jump? como fazer essa merda*/);
+
+input clock;
+input [7:0]adress; //Tamanho do salto
+output [7:0]pc_out;
+
+reg [7:0] num; //Valor atual de PC
+assign pc_out = num;
+
+initial begin
+	num = 0;
+end
+
+always @(posedge clock) begin
+	num = adress;
+end
+
+endmodule

@@ -1,0 +1,21 @@
+module regis(Reg1, Reg2, RegWrite, DataWrite, Reg1Write, Data1, Data2, clock);
+
+input Reg1, Reg2, Reg1Write;
+input [7:0] DataWrite;
+input RegWrite, clock;
+
+output [7:0] Data1, Data2;
+reg [7:0] bank [3:0];
+
+assign Data1 = bank[Reg1];
+assign Data2 = bank[Reg2];
+
+always
+
+	begin
+		@(posedge clock)
+		if(RegWrite)
+			bank[Reg1Write] <= DataWrite;
+	end
+
+endmodule
